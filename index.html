@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b8f">
+  <meta name="description" content="Bài luyện nghe VSTEP B1+ chủ đề Hobbies and Leisure dành cho giáo viên, có chức năng Evidence.">
+  <title>VSTEP Listening B1+ | Teacher Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="teacher">
+  <header class="site-header teacher-header">
+    <div class="brand-shell">
+      <img class="brand-logo" src="logo-cfl.jpg" alt="Logo Trung tâm Ngoại ngữ Đại học Cần Thơ">
+      <div class="brand-copy">
+        <h1>Hobbies &amp; Leisure</h1>
+        <span class="version-badge">Teacher</span>
+      </div>
+      <img class="brand-logo anniversary-logo" src="logo-35-years.jpg" alt="Logo kỷ niệm 35 năm CFL">
+    </div>
+  </header>
+
+  <nav class="workspace-bar" aria-label="Điều hướng và công cụ">
+    <div class="workspace-inner">
+      <div class="navigation-strip">
+        <div class="part-tabs" role="tablist" aria-label="Các phần thi">
+          <button class="part-tab is-active" type="button" role="tab" aria-selected="true" data-part="1">Part 1 <span>1–8</span></button>
+          <button class="part-tab" type="button" role="tab" aria-selected="false" data-part="2">Part 2 <span>9–20</span></button>
+          <button class="part-tab" type="button" role="tab" aria-selected="false" data-part="3">Part 3 <span>21–35</span></button>
+        </div>
+        <div class="sticky-audio" id="stickyAudio" hidden aria-label="Audio hiện tại">
+          <button class="sticky-audio-toggle" id="stickyAudioToggle" type="button" aria-label="Phát audio" aria-pressed="false">
+            <span id="stickyAudioIcon" aria-hidden="true">▶</span>
+          </button>
+          <div class="sticky-audio-meta">
+            <strong id="stickyAudioLabel">Q9–12</strong>
+            <span id="stickyAudioTime">0:00 / 0:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="toolbox" aria-label="Công cụ">
+        <button class="tool-toggle" id="highlightToggle" type="button" aria-pressed="false"><span class="tool-dot highlight-dot"></span>Highlight</button>
+        <button class="tool-toggle" id="dictionaryToggle" type="button" aria-pressed="false"><span class="tool-dot dictionary-dot"></span>Dict</button>
+        <div class="font-sizer" aria-label="Cỡ chữ">
+          <button type="button" id="fontDecrease" aria-label="Giảm cỡ chữ">A−</button>
+          <output id="fontValue" aria-live="polite">18</output>
+          <button type="button" id="fontIncrease" aria-label="Tăng cỡ chữ">A+</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="examRoot" class="exam-shell"></main>
+
+  <aside id="dictionaryPanel" class="dictionary-panel" hidden aria-live="polite">
+    <button class="dictionary-close" id="dictionaryClose" type="button" aria-label="Đóng từ điển">×</button>
+    <span class="dictionary-label">EN → VI</span>
+    <strong id="dictionaryWord"></strong>
+    <p id="dictionaryMeaning"></p>
+    <button id="dictionarySpeak" class="speak-button" type="button">🔊 Phát âm</button>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="exam-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
